@@ -1,0 +1,35 @@
+<web-app>
+
+<servlet>
+   <servlet-name>mServlet</servlet-name>
+   <servlet-class>org.acme.JServelet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>mServlet</servlet-name>
+   <url-pattern>/welcome</url-pattern>
+</servlet-mapping>
+
+
+
+<filter>
+    <filter-name>mFilter</filter-name>
+    <filter-class>org.acme.JFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>mFilter</filter-name>
+    <url-pattern>/welcome</url-pattern>
+</filter-mapping>
+
+
+<!-- filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>org.acme.servlet.SimpleServletFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <url-pattern>/welcome</url-pattern>
+</filter-mapping -->
+
+</web-app>
