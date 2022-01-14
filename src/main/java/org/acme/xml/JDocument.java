@@ -64,34 +64,25 @@ public class JDocument {
         return myWriter.toString().trim();
     }
 
-    public String doTransform()
+    public String contextTransform()
             throws TransformerException {
-        /*      Enumeration<URL> en = getClass().getClassLoader().getResources("META-INF/resources/xslt");
-        if (en.hasMoreElements()) {
-            URL metaInf = en.nextElement();
-            File fileMetaInf = new File(metaInf.toURI());
+        final File myFile = new File("classes/META-INF/resources/xslt/_e_pippo.xsl");
+        final TransformerFactory myFactory = TransformerFactory.newInstance();
+        final StreamSource myStreamSource = new StreamSource(myFile);
+        final Transformer myTransformer = myFactory.newTransformer(myStreamSource);
+        final StringWriter myWriter = new StringWriter();
+        myTransformer.transform(new DOMSource(theDocument), new StreamResult(myWriter));
+        return myWriter.toString();
+    }
 
-            File[] files = fileMetaInf.listFiles();
-            //or 
-            String[] filenames = fileMetaInf.list();
-            msg("ssssssssssss");
-            
-            
-            for(int i = 0; i < filenames.length; i++){
-                msg(i + " =" + filenames[i]);
-            }
-        }
-         */
+    public String resourceTransform()
+            throws TransformerException {
         final ClassLoader myClassLoader = Thread.currentThread().getContextClassLoader();
         final URL myUrl = myClassLoader.getResource("META-INF/resources/xslt/_e_pippo.xsl");
         final String myContent = myUrl.getFile();
         final File myFile = new File(myContent);
-
-        //final File myFile = new File(aXsltPath);
         final TransformerFactory myFactory = TransformerFactory.newInstance();
-        //final String myXsltPath = "http://localhost:8080/xslt/_e_pippo.xsl";
-        //final InputStream myInputStream = myClassLoader.getResourceAsStream(myXsltPath);
-
+        //
         final StreamSource myStreamSource = new StreamSource(myFile);
         final Transformer myTransformer = myFactory.newTransformer(myStreamSource);
         final StringWriter myWriter = new StringWriter();

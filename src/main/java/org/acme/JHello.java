@@ -13,8 +13,9 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/hello")
 public class JHello {
     
-    @ConfigProperty(name = "greeting.message") 
-    String theMessage;    
+    @ConfigProperty(name = "greeting.message")
+    String theMessage;
+    
     @Inject
     JBean theJBean;
 
@@ -31,7 +32,10 @@ public class JHello {
         } else {
             theJBean.setLang("fr");
         }
-        final String myRet =  " - " + theMessage + " - " + theJBean.doTransform();
+        //final String myContextPath = theRequest.getContextPath();
+        final String myRet =  " - " + theMessage + " - " + theJBean.contextTransform();
+        
+        //final String myRet =  " - " + theMessage + " - " + theJBean.resourceTransform();
         return myRet;
     }
 /*
