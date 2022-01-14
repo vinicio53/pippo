@@ -4,7 +4,7 @@
 package org.acme.xml;
 
 //import java.io.InputStream;
-import java.io.IOException;
+//import java.io.IOException;
 //import java.io.InputStream;
 //import java.io.StringReader;
 //import java.io.OutputStream;
@@ -12,7 +12,7 @@ import java.io.File;
 import java.util.Enumeration;
 
 import java.net.URL;
-import java.net.URISyntaxException;
+//import java.net.URISyntaxException;
 import java.io.StringWriter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -25,7 +25,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
-import javax.xml.transform.TransformerConfigurationException;
+//import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.parsers.ParserConfigurationException;
 

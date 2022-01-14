@@ -12,13 +12,13 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @Path("/hello")
 public class JHello {
-
     
     @ConfigProperty(name = "greeting.message") 
     String theMessage;    
-    
     @Inject
     JBean theJBean;
+
+    int theCounter = 0;
 
 
     //@Produces(MediaType.APPLICATION_XML)
@@ -26,7 +26,12 @@ public class JHello {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello()
             throws TransformerException {
-        final String myRet =  " - " + theMessage;
+        if (theCounter++ % 2 == 0) {
+            theJBean.setLang("it");
+        } else {
+            theJBean.setLang("fr");
+        }
+        final String myRet =  " - " + theMessage + " - " + theJBean.doTransform();
         return myRet;
     }
 /*

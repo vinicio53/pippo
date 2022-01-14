@@ -4,7 +4,7 @@
     <xsl:output indent="yes" method="html" omit-xml-declaration="yes"/>
     
     <xsl:template match="/document">
-        hello xsl: hola a todo el mundaaaaaaaaaaaazzz
+        hola xsl:
         <xsl:if test="@lang= 'it'">
             ITA
         </xsl:if>
