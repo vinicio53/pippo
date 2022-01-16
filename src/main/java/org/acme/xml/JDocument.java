@@ -28,6 +28,10 @@ import javax.xml.transform.stream.StreamSource;
 //import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.parsers.ParserConfigurationException;
+//import org.apache.commons.io.FileUtils;
+import java.nio.file.Paths;
+
+import java.net.MalformedURLException;
 
 public class JDocument {
 
@@ -48,11 +52,6 @@ public class JDocument {
         return theDocument.getDocumentElement();
     }
 
-    public String getTest() {
-        String s = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><?xml-stylesheet type=\"text/xsl\" href=\"./xslt/_e_pippo.xsl\"?><document version=\"0.148\"><entry></entry></document>";
-        return s;
-    }
-
     public String getToString()
             throws TransformerException {
 
@@ -64,6 +63,7 @@ public class JDocument {
         return myWriter.toString().trim();
     }
 
+    /*
     public String contextTransform()
             throws TransformerException {
         final File myFile = new File("classes/META-INF/resources/xslt/_e_pippo.xsl");
@@ -74,16 +74,14 @@ public class JDocument {
         myTransformer.transform(new DOMSource(theDocument), new StreamResult(myWriter));
         return myWriter.toString();
     }
-
-    public String resourceTransform()
-            throws TransformerException {
-        final ClassLoader myClassLoader = Thread.currentThread().getContextClassLoader();
-        final URL myUrl = myClassLoader.getResource("META-INF/resources/xslt/_e_pippo.xsl");
-        final String myContent = myUrl.getFile();
-        final File myFile = new File(myContent);
+     */
+    public String urlTransform(
+        final String aUrl)
+            throws Exception {
+        final URL myUrl = new URL(aUrl);
         final TransformerFactory myFactory = TransformerFactory.newInstance();
         //
-        final StreamSource myStreamSource = new StreamSource(myFile);
+        final StreamSource myStreamSource = new StreamSource(myUrl.openStream());
         final Transformer myTransformer = myFactory.newTransformer(myStreamSource);
         final StringWriter myWriter = new StringWriter();
         myTransformer.transform(new DOMSource(theDocument), new StreamResult(myWriter));

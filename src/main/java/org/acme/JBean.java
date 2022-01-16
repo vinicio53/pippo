@@ -18,23 +18,13 @@ public class JBean
         if (myDocumentElement == null) {
             myDocumentElement = myDocument.createElement("document");
             myDocument.appendChild(myDocumentElement);
-            //
-
-            //ProcessingInstruction pi = myDocument.createProcessingInstruction("target", "instruction");
-            //myDocumentElement.getParentNode().insertBefore(pi, myDocumentElement);
-
         }
     }
 
-    public void setLang(
-            final String aLang) {
+    public void setCounter(
+            final int aCounter) {
         final Element myDocumentElement = getDocumentElement();
-        myDocumentElement.setAttribute("lang", aLang);
-        String myDirection = "ltr";
-        if (aLang.equals("ar")) {
-            myDirection = "rtl";
-        }
-        myDocumentElement.setAttribute("dir", myDirection);
+        myDocumentElement.setAttribute("counter", Integer.toString(aCounter));
     }
 
     private static void msg(final String s) {

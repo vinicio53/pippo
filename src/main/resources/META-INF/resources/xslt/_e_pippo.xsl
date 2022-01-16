@@ -4,14 +4,7 @@
     <xsl:output indent="yes" method="html" omit-xml-declaration="yes"/>
     
     <xsl:template match="/document">
-        hola xsl:
-        <xsl:if test="@lang= 'it'">
-            ITA
-        </xsl:if>
-        <xsl:if test="not(@lang= 'it')">
-            USA
-        </xsl:if>
-        
+        counter: <xsl:value-of select="@counter" />
     </xsl:template> 
     
     
