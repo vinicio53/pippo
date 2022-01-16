@@ -1,23 +1,13 @@
 /*
  * Created on February 16 2006
  */
-package org.acme.xml;
+package com.bazar.xml;
 
-//import java.io.InputStream;
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.io.StringReader;
-//import java.io.OutputStream;
-import java.io.File;
-import java.util.Enumeration;
 
 import java.net.URL;
-//import java.net.URISyntaxException;
 import java.io.StringWriter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-//import org.w3c.dom.ProcessingInstruction;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;

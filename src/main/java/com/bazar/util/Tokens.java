@@ -2,7 +2,7 @@
  * Created on 14 Oct 2014
  */
 
-package org.acme.util;
+package com.bazar.util;
 
 public class Tokens {
 

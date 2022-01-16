@@ -1,7 +1,7 @@
 /*
  * Created on 14 April 2010
  */
-package org.acme.util;
+package com.bazar.util;
 
 public final class Keys {
 

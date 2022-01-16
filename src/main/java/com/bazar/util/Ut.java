@@ -1,7 +1,7 @@
 /*
  * Created on 21 October 2016
  */
-package org.acme.util;
+package com.bazar.util;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

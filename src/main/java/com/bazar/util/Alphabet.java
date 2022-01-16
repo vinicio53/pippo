@@ -1,7 +1,7 @@
 /*
  * Created on 24 ottobre 2005
  */
-package org.acme.util;
+package com.bazar.util;
 
 public class Alphabet {
     private static final String ALPHABET = "ABCDEFGHIJKLMNPQRSTUVWXYZ12345679";

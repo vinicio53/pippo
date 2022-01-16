@@ -1,9 +1,9 @@
-package org.acme;
+package com.bazar;
 
 import javax.enterprise.context.SessionScoped;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.acme.xml.JDocument;
+import com.bazar.xml.JDocument;
 import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.ProcessingInstruction;
 

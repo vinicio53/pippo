@@ -1,4 +1,4 @@
-package org.acme;
+package com.bazar;
 
 import java.io.IOException;
 import javax.servlet.Filter;

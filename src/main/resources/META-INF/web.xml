@@ -2,7 +2,7 @@
 
 <servlet>
    <servlet-name>mServlet</servlet-name>
-   <servlet-class>org.acme.JServelet</servlet-class>
+   <servlet-class>com.bazar.JServelet</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -14,7 +14,7 @@
 
 <filter>
     <filter-name>mFilter</filter-name>
-    <filter-class>org.acme.JFilter</filter-class>
+    <filter-class>com.bazar.JFilter</filter-class>
 </filter>
 <filter-mapping>
     <filter-name>mFilter</filter-name>
@@ -24,7 +24,7 @@
 
 <!-- filter>
     <filter-name>myFilter</filter-name>
-    <filter-class>org.acme.servlet.SimpleServletFilter</filter-class>
+    <filter-class>com.bazar.servlet.SimpleServletFilter</filter-class>
 </filter>
 
 <filter-mapping>
